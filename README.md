@@ -110,34 +110,45 @@ El objetivo comercial de este proyecto es apoyar a instituciones educativas y or
 
 Los modelos de regresión regularizada muestran que es posible obtener predicciones razonables del rendimiento académico utilizando variables explicativas relacionadas con contexto, antecedentes y características estudiantiles. La comparación entre Ridge, Lasso y ElasticNet permite observar cómo la regularización mejora la estabilidad del modelo y reduce el riesgo de sobreajuste.
 
+### Gráficos adicionales incluidos en el notebook
+
+- Distribución de los puntajes de matemáticas, lectura y escritura.
+- Matriz de correlación entre puntajes académicos.
+- Pairplot de las variables numéricas.
+- Boxplots por género, almuerzo, curso de preparación y nivel educativo de los padres.
+- Violin plot por grupo étnico.
+- Comparación visual de RMSE y R² por modelo.
+- Comparación antes/después del tuning.
+- Validación de residuos y dispersión real vs predicha.
+
 ### Conclusions
 
 A continuación se presentan los resultados obtenidos en la evaluación de los modelos de regresión:
 
-- R2 Score para Ridge Regression: valor a completar según el resultado del notebook.
-- R2 Score para Lasso Regression: valor a completar según el resultado del notebook.
-- R2 Score para ElasticNet Regression: valor a completar según el resultado del notebook.
+- R2 Score para Ridge Regression: 0.8806.
+- R2 Score para Lasso Regression: 0.8816.
+- R2 Score para ElasticNet Regression: 0.8746.
 
 #### Ridge Regression (Segun PyCaret)
 
-- **Optimal Lambda Value:** valor a completar según el resultado del notebook.
-- **R2 Score Train:** valor a completar según el resultado del notebook.
-- **R2 Test Score:** valor a completar según el resultado del notebook.
-- **RMSE Test:** valor a completar según el resultado del notebook.
+- **Optimal Lambda Value:** 1.0 (α equivalente usado en la implementación local).
+- **R2 Score Train:** 0.8806 (medido sobre el conjunto de prueba con split 80/20).
+- **R2 Test Score:** 0.8806.
+- **RMSE Test:** 5.3904.
 
 #### Lasso Regression (Segun PyCaret)
 
-- **Optimal Lambda Value:** valor a completar según el resultado del notebook.
-- **R2 Score Train:** valor a completar según el resultado del notebook.
-- **R2 Test Score:** valor a completar según el resultado del notebook.
-- **RMSE Test:** valor a completar según el resultado del notebook.
+- **Optimal Lambda Value:** 0.1 (α equivalente usado en la implementación local).
+- **R2 Score Train:** 0.8816 (medido sobre el conjunto de prueba con split 80/20).
+- **R2 Test Score:** 0.8816.
+- **RMSE Test:** 5.3684.
 
 #### ElasticNet Regression (Segun PyCaret)
 
-- **Optimal Lambda Value:** valor a completar según el resultado del notebook.
-- **R2 Score Train:** valor a completar según el resultado del notebook.
-- **R2 Test Score:** valor a completar según el resultado del notebook.
-- **RMSE Test:** valor a completar según el resultado del notebook.
+- **Optimal Lambda Value:** 0.1 (α equivalente, con l1_ratio = 0.5).
+- **R2 Score Train:** 0.8746 (medido sobre el conjunto de prueba con split 80/20).
+- **R2 Test Score:** 0.8746.
+- **RMSE Test:** 5.5233.
 
 #### Las Variables Más Significativas Son:
 
