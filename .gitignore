@@ -1,0 +1,44 @@
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# Datos grandes o sensibles
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# Modelos y artefactos
+*.pkl
+*.joblib
+*.model
+*.onnx
+*.pb
+
+# Configuración local
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
