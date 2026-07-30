@@ -1,0 +1,221 @@
+{
+  "setup_df": {
+    "dataset_rows": 1000,
+    "dataset_columns": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course",
+      "math score",
+      "reading score",
+      "writing score",
+      "test_prep_completed"
+    ],
+    "target": "math score",
+    "scenario_a_features": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course"
+    ],
+    "scenario_b_features": [
+      "gender",
+      "race/ethnicity",
+      "parental level of education",
+      "lunch",
+      "test preparation course",
+      "reading score",
+      "writing score"
+    ]
+  },
+  "results_df": [
+    {
+      "scenario": "Escenario A",
+      "model": "RandomForestRegressor",
+      "rmse_mean": 13.955144193314064,
+      "rmse_std": 1.4370212593655163,
+      "mae_mean": 11.299105509056051,
+      "mae_std": 1.2969077474037667,
+      "r2_mean": 0.08152037864278387,
+      "r2_std": 0.11100271376546939
+    },
+    {
+      "scenario": "Escenario A",
+      "model": "DummyRegressor",
+      "rmse_mean": 15.282337383823915,
+      "rmse_std": 1.7682460807807425,
+      "mae_mean": 12.293881265945878,
+      "mae_std": 1.5367554466980962,
+      "r2_mean": -0.10026606572249505,
+      "r2_std": 0.14786139584693683
+    },
+    {
+      "scenario": "Escenario B",
+      "model": "RandomForestRegressor",
+      "rmse_mean": 6.379930202053914,
+      "rmse_std": 0.6778242657416621,
+      "mae_mean": 5.0911800848750275,
+      "mae_std": 0.6107775768272845,
+      "r2_mean": 0.8069424011315111,
+      "r2_std": 0.03327049423983453
+    },
+    {
+      "scenario": "Escenario B",
+      "model": "DummyRegressor",
+      "rmse_mean": 15.282337383823915,
+      "rmse_std": 1.7682460807807425,
+      "mae_mean": 12.293881265945878,
+      "mae_std": 1.5367554466980962,
+      "r2_mean": -0.10026606572249505,
+      "r2_std": 0.14786139584693683
+    }
+  ],
+  "holdout_metrics": {
+    "rmse": 5.997161451123761,
+    "mae": 4.619903422619047,
+    "r2": 0.8521978221651624
+  },
+  "fairness_df": [
+    {
+      "group_col": "gender",
+      "group": "female",
+      "rmse": 6.27470037151693,
+      "mae": 4.737438328424154,
+      "count": 97
+    },
+    {
+      "group_col": "gender",
+      "group": "male",
+      "rmse": 5.723497991116533,
+      "mae": 4.509215210355987,
+      "count": 103
+    },
+    {
+      "group_col": "race/ethnicity",
+      "group": "group A",
+      "rmse": 7.526946654354607,
+      "mae": 6.382125,
+      "count": 20
+    },
+    {
+      "group_col": "race/ethnicity",
+      "group": "group B",
+      "rmse": 6.490615024410084,
+      "mae": 4.859483590733591,
+      "count": 37
+    },
+    {
+      "group_col": "race/ethnicity",
+      "group": "group C",
+      "rmse": 6.320875477031592,
+      "mae": 4.723742937853107,
+      "count": 59
+    },
+    {
+      "group_col": "race/ethnicity",
+      "group": "group D",
+      "rmse": 5.360978627442444,
+      "mae": 4.311538194444444,
+      "count": 60
+    },
+    {
+      "group_col": "race/ethnicity",
+      "group": "group E",
+      "rmse": 4.181763175755157,
+      "mae": 3.297673611111113,
+      "count": 24
+    },
+    {
+      "group_col": "lunch",
+      "group": "free/reduced",
+      "rmse": 6.335199481210085,
+      "mae": 4.8674172008547005,
+      "count": 78
+    },
+    {
+      "group_col": "lunch",
+      "group": "standard",
+      "rmse": 5.770670900113225,
+      "mae": 4.461656908665106,
+      "count": 122
+    }
+  ],
+  "interpretability": {
+    "feature_importance_top_10": {
+      "num__reading score": 0.5587052158540229,
+      "num__writing score": 0.23359342290387955,
+      "cat__gender_female": 0.06152188170189669,
+      "cat__gender_male": 0.05951116574464352,
+      "cat__race/ethnicity_group E": 0.010261268395227797,
+      "cat__lunch_free/reduced": 0.00818556424777375,
+      "cat__lunch_standard": 0.007609964406254394,
+      "cat__parental level of education_associate's degree": 0.006545493938931819,
+      "cat__parental level of education_some college": 0.00651783202281217,
+      "cat__race/ethnicity_group C": 0.006380980469013041
+    },
+    "permutation_importance_top_10": [
+      {
+        "feature": "num__reading score",
+        "importance_mean": 0.5914614696202627,
+        "importance_std": 0.0657912578692471
+      },
+      {
+        "feature": "num__writing score",
+        "importance_mean": 0.40120091002407615,
+        "importance_std": 0.029313679616891714
+      },
+      {
+        "feature": "cat__gender_female",
+        "importance_mean": 0.09009340504078132,
+        "importance_std": 0.011301608851845297
+      },
+      {
+        "feature": "cat__gender_male",
+        "importance_mean": 0.0833611473122554,
+        "importance_std": 0.010238259922501061
+      },
+      {
+        "feature": "cat__race/ethnicity_group E",
+        "importance_mean": 0.006661022273701717,
+        "importance_std": 0.0037255528942822034
+      },
+      {
+        "feature": "cat__test preparation course_none",
+        "importance_mean": 0.002090969660801162,
+        "importance_std": 0.0023644610533153513
+      },
+      {
+        "feature": "cat__test preparation course_completed",
+        "importance_mean": 0.001851049079254896,
+        "importance_std": 0.002280521276610233
+      },
+      {
+        "feature": "cat__race/ethnicity_group B",
+        "importance_mean": 0.0011777647962950889,
+        "importance_std": 0.0010768547299247438
+      },
+      {
+        "feature": "cat__lunch_free/reduced",
+        "importance_mean": 0.0008100264642259325,
+        "importance_std": 0.0022723022820472123
+      },
+      {
+        "feature": "cat__lunch_standard",
+        "importance_mean": 0.00024867255882870534,
+        "importance_std": 0.0019929757279066344
+      }
+    ],
+    "test_prep_course_effect_points": 0.36249999999998295,
+    "sample_prediction": 65.12
+  },
+  "parameters": {
+    "cv_splits": 5,
+    "group_column": "race/ethnicity",
+    "random_state": 42,
+    "remove_outliers": false,
+    "baseline_model": "DummyRegressor",
+    "final_model": "RandomForestRegressor"
+  }
+}
