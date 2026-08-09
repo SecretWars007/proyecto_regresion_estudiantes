@@ -1,0 +1,16 @@
+,importance
+num__reading score,0.5587052158540229
+num__writing score,0.23359342290387955
+cat__gender_female,0.06152188170189669
+cat__gender_male,0.05951116574464352
+cat__race/ethnicity_group E,0.010261268395227797
+cat__lunch_free/reduced,0.00818556424777375
+cat__lunch_standard,0.007609964406254394
+cat__parental level of education_associate's degree,0.006545493938931819
+cat__parental level of education_some college,0.00651783202281217
+cat__race/ethnicity_group C,0.006380980469013041
+cat__test preparation course_none,0.005864298029404218
+cat__test preparation course_completed,0.005706410857147937
+cat__parental level of education_high school,0.005545222691190812
+cat__race/ethnicity_group D,0.0055438154589085055
+cat__race/ethnicity_group B,0.004930252915220354
