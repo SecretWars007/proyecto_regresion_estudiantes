@@ -23,6 +23,11 @@ ENV/
 *.feather
 *.h5
 *.hdf5
+!dataset/
+!dataset/StudentsPerformance.csv
+!plots/
+!plots/feature_importance.csv
+!plots/permutation_importance.csv
 
 # Modelos y artefactos
 *.pkl
@@ -30,6 +35,8 @@ ENV/
 *.model
 *.onnx
 *.pb
+!models/
+!models/*.joblib
 
 # Configuración local
 .env
